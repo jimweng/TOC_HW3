@@ -1,10 +1,9 @@
-/*
-	Name       : ¿¿¿
+/*                                                                           
+	Name       : ç¿å­éˆ
 	Student ID : F74019041
-	Description: This code is used for parse the average real price information
+	Description: This code is used for parse the average real price informati    on
 				 from the website of government supplied.
-				 
-*/
+*/ 
 import java.lang.Object;
 import org.json.*;
 import java.util.regex.*;
@@ -41,10 +40,10 @@ public class TocHw3{
 			for(int i=0;i<findAnswer.length();i++)
 			{
 				json=findAnswer.getJSONObject(i);
-				area=json.getString("¿¿¿¿");
-				location=json.getString("¿¿¿¿¿¿¿¿¿¿¿¿");
-				month=json.getInt("¿¿¿¿");
-				totalPrice=json.getInt("¿¿¿");
+				area=json.getString("é„‰é®å¸‚å€");
+				location=json.getString("åœŸåœ°å€æ®µä½ç½®æˆ–å»ºç‰©å€é–€ç‰Œ");
+				month=json.getInt("äº¤æ˜“å¹´æœˆ");
+				totalPrice=json.getInt("ç¸½åƒ¹å…ƒ");
 				if(area.contains(county)&&location.contains(roadName))
 				{
 					if(month>=year)
@@ -59,9 +58,10 @@ public class TocHw3{
 				answer=result/counter;
 				System.out.println(answer);
 			}
-			//Handle search never match, which makes denominator be zero.
+            //Handle search never match, which makes denominator be zero.
 			//
 			//
+
 			else
 				System.out.println("No Data match");
 			in.close();
